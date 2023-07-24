@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:SAP.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
         <TextBlock Text="Discover"
                    Foreground="White"
                    FontSize="28"
@@ -63,51 +64,161 @@
                     CornerRadius="10"
                     Margin="45,0,0,0">
 
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10" 
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#ffc554" Offset="0.0"/>
-                        <GradientStop Color="#ff8354" Offset="1"/>
+                        <GradientStop Color="LightGreen" Offset="0.0"/>
+                        <GradientStop Color="DarkGreen" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-            </Border>
+
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Easy way of learning&#x0a;how to sort your&#x0a;data " 
+                                   FontSize="18"
+                                   Margin="10,120"
+                                   Foreground="White"/>
+                        </StackPanel>
+
+                        <Image Width="202"
+                           Height="227"
+                           Source="/Images/sorting.jpg"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" Margin="-2,-114,0,87" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.289"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Grid>
+                </Border>
         </StackPanel>
 
-        <StackPanel>
-            <TextBlock Text="Most Used"
-                   Foreground="White"
-                   FontSize="20"
-                   HorizontalAlignment="Left"
-                   Margin="0,10,0,20"
-                   />
+            <StackPanel Height="193">
+                <TextBlock Text="Most Used"
+                               Foreground="White"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               Margin="0,10,0,20"
+                               />
+
+                <StackPanel Orientation="Horizontal">
+
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Margin" Value="15,-20,0,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <Border Width="150"
+                                    Height="150"
+                                    Background="MediumPurple"
+                                    CornerRadius="10"
+                                    Margin="0,-20,0,0">
+
+                    </Border>
+
+                    <Border Width="150"
+                                    Height="150"
+                                    Background="DarkRed"
+                                    CornerRadius="10">
+
+                    </Border>
+
+                    <Border Width="150"
+                                    Height="150"
+                                    Background="DarkOliveGreen"
+                                    CornerRadius="10">
+
+                    </Border>
+                    <Border Width="150"
+                                    Height="150"
+                                    Background="LightCoral"
+                                    CornerRadius="10"/>
+
+                </StackPanel>
+            </StackPanel>
+        
+            <StackPanel Orientation="Horizontal">
+
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Margin" Value="0,5,15,0"/>
+                    </Style>
+                </StackPanel.Resources>
+
+                <Border Width="150"
+                                    Height="150"
+                                    Background="MediumPurple"
+                                    CornerRadius="10"
+                                    >
+
+                </Border>
+
+                <Border Width="150"
+                                    Height="150"
+                                    Background="DarkRed"
+                                    CornerRadius="10">
+
+                </Border>
+
+                <Border Width="150"
+                                    Height="150"
+                                    Background="DarkOliveGreen"
+                                    CornerRadius="10">
+
+                </Border>
+                <Border Width="150"
+                                    Height="150"
+                                    Background="LightCoral"
+                                    CornerRadius="10"/>
+
+            </StackPanel>
 
             <StackPanel Orientation="Horizontal">
 
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="Margin" Value="15,-20,0,0"/>
+                        <Setter Property="Margin" Value="0,10,15,0"/>
                     </Style>
                 </StackPanel.Resources>
-                <Border Width="150"
-                        Height="150"
-                        Background="MediumPurple"
-                        CornerRadius="10"
-                        Margin="0,-20,0,0"/>
 
                 <Border Width="150"
-                        Height="150"
-                        Background="DarkRed"
-                        CornerRadius="10"/>
+                                    Height="150"
+                                    Background="MediumPurple"
+                                    CornerRadius="10"
+                                    >
+
+                </Border>
 
                 <Border Width="150"
-                        Height="150"
-                        Background="DarkOliveGreen"
-                        CornerRadius="10"/>
-                
+                                    Height="150"
+                                    Background="DarkRed"
+                                    CornerRadius="10">
+
+                </Border>
+
                 <Border Width="150"
-                        Height="150"
-                        Background="LightCoral"
-                        CornerRadius="10"/>
+                                    Height="150"
+                                    Background="DarkOliveGreen"
+                                    CornerRadius="10">
+
+                </Border>
+                <Border Width="150"
+                                    Height="150"
+                                    Background="LightCoral"
+                                    CornerRadius="10"/>
+
             </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </ScrollViewer>
 </UserControl>

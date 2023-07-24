@@ -128,5 +128,8 @@
   <ItemGroup>
     <Resource Include="Images\bigbluebutton_conference.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sorting.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
